@@ -457,8 +457,11 @@
       </div>
 
       <div>
-        <!-- Formspree: crie conta em formspree.io e substitua SEU_ID_AQUI -->
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="770759b6-f207-43ab-ab88-858684de216a" />
+          <input type="hidden" name="subject" value="Novo contato via portfólio" />
+          <input type="hidden" name="from_name" value="Portfólio Eduardo Cremm" />
+          <input type="checkbox" name="botcheck" style="display:none" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nome *</label>
