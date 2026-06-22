@@ -10,6 +10,32 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// Certificate modal
+const certModal = document.getElementById('cert-modal');
+const certModalImg = document.getElementById('cert-modal-img');
+const certModalSkeleton = document.getElementById('cert-modal-skeleton');
+
+document.querySelectorAll('.cert-link').forEach(btn => {
+  btn.addEventListener('click', () => {
+    certModalImg.classList.remove('loaded');
+    certModalSkeleton.classList.remove('hidden');
+    certModalImg.src = btn.dataset.certImg;
+    certModal.classList.add('open');
+  });
+});
+
+certModalImg.addEventListener('load', () => {
+  certModalImg.classList.add('loaded');
+  certModalSkeleton.classList.add('hidden');
+});
+
+function closeCertModal() {
+  certModal.classList.remove('open');
+}
+
+certModal.querySelectorAll('[data-cert-close]').forEach(el => el.addEventListener('click', closeCertModal));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCertModal(); });
+
 // Nav shadow on scroll
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').style.boxShadow =
@@ -28,23 +54,27 @@ if (form) {
     btn.disabled = true;
 
     try {
+      const data = Object.fromEntries(new FormData(form).entries());
       const res = await fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
       });
 
       if (res.ok) {
         form.reset();
+        if (window.turnstile) window.turnstile.reset();
         successMsg.style.display = 'block';
         btn.textContent = 'Enviar mensagem 🚀';
         btn.disabled = false;
         setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
       } else {
+        if (window.turnstile) window.turnstile.reset();
         btn.textContent = 'Erro — tente novamente';
         btn.disabled = false;
       }
     } catch {
+      if (window.turnstile) window.turnstile.reset();
       btn.textContent = 'Erro — tente novamente';
       btn.disabled = false;
     }

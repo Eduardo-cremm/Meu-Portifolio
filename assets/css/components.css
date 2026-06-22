@@ -55,6 +55,8 @@
   color: var(--muted);
 }
 
+.cf-turnstile { margin: 0.25rem 0; }
+
 /* ─── FORM ─── */
 .contact-form { display: flex; flex-direction: column; gap: 1rem; }
 .form-row     { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }

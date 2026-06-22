@@ -6,7 +6,7 @@
   <title>Eduardo Cremm · Desenvolvedor Full Stack</title>
 
   <!-- SEO -->
-  <meta name="description" content="Eduardo Cremm Farias — Desenvolvedor Full Stack especializado em React, Next.js, Node.js, React Native e TypeScript. Desenvolvimento web e mobile para startups e empresas. São Paulo, SP." />
+  <meta name="description" content="Eduardo Cremm Farias: Desenvolvedor Full Stack especializado em React, Next.js, Node.js, React Native e TypeScript. Desenvolvimento web e mobile para startups e empresas. São Paulo, SP." />
   <meta name="keywords" content="desenvolvedor full stack, react, next.js, node.js, react native, typescript, freelance, desenvolvimento web, desenvolvimento mobile, São Paulo, FIAP" />
   <meta name="author" content="Eduardo Cremm Farias" />
   <meta name="robots" content="index, follow" />
@@ -37,6 +37,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenge.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="assets/css/base.css" />
@@ -55,6 +58,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#about">Sobre</a></li>
+    <li><a href="#certificates">Certificados</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#services">Serviços</a></li>
     <li><a href="#projects">Projetos</a></li>
@@ -97,7 +101,7 @@
         <div class="stat-label">Tecnologias no stack</div>
       </div>
       <div class="stat">
-        <div class="stat-num">3</div>
+        <div class="stat-num">2+</div>
         <div class="stat-label">Projetos reais em curso</div>
       </div>
       <div class="stat">
@@ -140,7 +144,7 @@
           <p class="about-text">
             Tenho experiência com bancos de dados <strong>SQL (PostgreSQL, Oracle)</strong> e <strong>NoSQL (MongoDB)</strong>,
             versionamento com Git/GitHub, e aplico princípios de <strong>Clean Code, SOLID e arquitetura escalável</strong>
-            em cada projeto. Trabalho com metodologias ágeis — Scrum e Kanban — e entrego dentro do prazo.
+            em cada projeto. Trabalho com metodologias ágeis, Scrum e Kanban, e entrego dentro do prazo.
           </p>
           <p class="about-text">
             Atualmente finalizando meu <strong>primeiro produto em produção</strong>: um aplicativo completo para gestão
@@ -164,15 +168,15 @@
         <div>
           <div class="edu-institution">FIAP</div>
           <div class="edu-course">Análise e Desenvolvimento de Sistemas</div>
-          <div class="edu-period">2024 – 2026 · Em andamento</div>
+          <div class="edu-period">2024 – 2026</div>
         </div>
       </div>
       <div class="edu-card fade-in">
         <div class="edu-icon">⚙️</div>
         <div>
           <div class="edu-institution">FIAP</div>
-          <div class="edu-course">Engenharia de Software</div>
-          <div class="edu-period">2024 – 2026 · Em andamento</div>
+          <div class="edu-course">Curso Engenharia de Software</div>
+          <div class="edu-period">2025 – 2026</div>
         </div>
       </div>
     </div>
@@ -191,92 +195,162 @@
   </div>
 </section>
 
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="container">
+    <p class="section-label">Qualificações</p>
+    <h2 class="section-title">Certificados</h2>
+    <p class="section-desc">Certificações FIAP em desenvolvimento, design web, mobile e tecnologias emergentes.</p>
+    <div class="cert-grid">
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">⚙️</div>
+        <div class="cert-title">Curso: Engenharia de Software</div>
+        <div class="cert-meta">FIAP · Novembro de 2025</div>
+        <button class="cert-link" data-cert-img="assets/certificates/nano-engenharia-software.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <span class="cert-seal gold">Gold</span>
+        <div class="cert-icon">🖥️</div>
+        <div class="cert-title">Análise de Sistemas e Prototipação Web</div>
+        <div class="cert-meta">FIAP · Julho de 2024</div>
+        <button class="cert-link" data-cert-img="assets/certificates/qualificacao-prototipacao-web.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <span class="cert-seal silver">Silver</span>
+        <div class="cert-icon">🖥️</div>
+        <div class="cert-title">Análise de Sistemas e Prototipagem Web</div>
+        <div class="cert-meta">FIAP · Julho de 2024</div>
+        <button class="cert-link" data-cert-img="assets/certificates/qualificacao-prototipagem-web.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <span class="cert-seal silver">Silver</span>
+        <div class="cert-icon">🎨</div>
+        <div class="cert-title">Análise e Design Web 2.0</div>
+        <div class="cert-meta">FIAP · Dezembro de 2024</div>
+        <button class="cert-link" data-cert-img="assets/certificates/qualificacao-design-web2.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <span class="cert-seal silver">Silver</span>
+        <div class="cert-icon">🎨</div>
+        <div class="cert-title">Desenvolvimento e Designer Web 2.0</div>
+        <div class="cert-meta">FIAP · Dezembro de 2024</div>
+        <button class="cert-link" data-cert-img="assets/certificates/qualificacao-dev-designer-web2.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <span class="cert-seal gold">Gold</span>
+        <div class="cert-icon">📱</div>
+        <div class="cert-title">Desenvolvimento de Aplicações Móveis</div>
+        <div class="cert-meta">FIAP · Junho de 2025</div>
+        <button class="cert-link" data-cert-img="assets/certificates/qualificacao-apps-moveis.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <span class="cert-seal gold">Gold</span>
+        <div class="cert-icon">🤖</div>
+        <div class="cert-title">Estratégia e Inovação Tecnológica com IA e IoT</div>
+        <div class="cert-meta">FIAP · Dezembro de 2025</div>
+        <button class="cert-link" data-cert-img="assets/certificates/qualificacao-ia-iot.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🧭</div>
+        <div class="cert-title">Curso: Leadership and Corporate Accountability</div>
+        <div class="cert-meta">FIAP · Maio de 2026</div>
+        <button class="cert-link" data-cert-img="assets/certificates/nano-leadership-accountability.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🧠</div>
+        <div class="cert-title">Curso: Liderança e Desenvolvimento de Competências</div>
+        <div class="cert-meta">FIAP · Maio de 2026</div>
+        <button class="cert-link" data-cert-img="assets/certificates/curso-lideranca-competencias.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">📐</div>
+        <div class="cert-title">Nivelamento: Lógica de Programação</div>
+        <div class="cert-meta">FIAP · Agosto de 2025</div>
+        <button class="cert-link" data-cert-img="assets/certificates/nivelamento-logica-programacao.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">➗</div>
+        <div class="cert-title">Nivelamento: Matemática</div>
+        <div class="cert-meta">FIAP · Agosto de 2025</div>
+        <button class="cert-link" data-cert-img="assets/certificates/nivelamento-matematica.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">💬</div>
+        <div class="cert-title">Nivelamento: Comunicação</div>
+        <div class="cert-meta">FIAP · Agosto de 2025</div>
+        <button class="cert-link" data-cert-img="assets/certificates/nivelamento-comunicacao.png">Ver certificado <span class="cert-link-arrow">→</span></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="container">
     <p class="section-label">Stack técnica</p>
     <h2 class="section-title">Tecnologias & Ferramentas</h2>
-    <p class="section-desc">Stack focado em JavaScript/TypeScript — do front ao back, do web ao mobile.</p>
+    <p class="section-desc">Stack focado em JavaScript/TypeScript: do front ao back, do web ao mobile.</p>
     <div class="skills-grid">
 
       <div class="skill-card fade-in">
         <div class="skill-icon">⚡</div>
         <div class="skill-name">JavaScript / TypeScript</div>
         <div class="skill-desc">Linguagem principal. Código tipado, manutenível e escalável com TypeScript no front e no back.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiência</span><span>85%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-        </div>
       </div>
 
       <div class="skill-card fade-in">
         <div class="skill-icon">⚛️</div>
         <div class="skill-name">React & Next.js</div>
         <div class="skill-desc">Interfaces web responsivas com React e SSR/SSG com Next.js. Componentes reutilizáveis e performance.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiência</span><span>82%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div>
-        </div>
       </div>
 
       <div class="skill-card fade-in">
         <div class="skill-icon">📱</div>
         <div class="skill-name">React Native</div>
         <div class="skill-desc">Apps mobile multiplataforma para iOS e Android. Uma base de código, duas plataformas.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiência</span><span>78%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:78%"></div></div>
-        </div>
       </div>
 
       <div class="skill-card fade-in">
         <div class="skill-icon">🟢</div>
         <div class="skill-name">Node.js & Express</div>
         <div class="skill-desc">APIs RESTful, autenticação JWT, regras de negócio, integração com serviços e bancos de dados.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiência</span><span>80%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-        </div>
       </div>
 
       <div class="skill-card fade-in">
         <div class="skill-icon">🗄️</div>
         <div class="skill-name">SQL & NoSQL</div>
         <div class="skill-desc">PostgreSQL, Oracle e MySQL para bancos relacionais. MongoDB para documentos. Modelagem e otimização.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiência</span><span>75%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
-        </div>
       </div>
 
       <div class="skill-card fade-in">
         <div class="skill-icon">🐳</div>
         <div class="skill-name">Docker & Cloud (AWS)</div>
         <div class="skill-desc">Containerização com Docker, deploy em ambientes cloud AWS, CI/CD e ambientes de produção.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiência</span><span>60%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:60%"></div></div>
-        </div>
       </div>
 
       <div class="skill-card fade-in">
         <div class="skill-icon">🛠️</div>
         <div class="skill-name">Git & GitHub</div>
         <div class="skill-desc">Controle de versão, Git Flow, branches, pull requests e histórico limpo de entregas.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiência</span><span>80%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-        </div>
       </div>
 
       <div class="skill-card fade-in">
         <div class="skill-icon">📐</div>
         <div class="skill-name">Clean Code & SOLID</div>
         <div class="skill-desc">Código legível, testável e manutenível. Arquitetura em camadas, reutilização e boas práticas.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-label"><span>Proficiência</span><span>75%</span></div>
-          <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-        </div>
       </div>
 
     </div>
@@ -288,7 +362,7 @@
   <div class="container">
     <p class="section-label">O que eu ofereço</p>
     <h2 class="section-title">Serviços</h2>
-    <p class="section-desc">Soluções digitais completas — da ideia ao deploy, com qualidade e prazo.</p>
+    <p class="section-desc">Soluções digitais completas: da ideia ao deploy, com qualidade e prazo.</p>
     <div class="services-grid">
 
       <div class="service-card fade-in">
@@ -306,7 +380,7 @@
       <div class="service-card fade-in">
         <div class="service-icon">📱</div>
         <div class="service-title">Aplicativo Mobile</div>
-        <div class="service-desc">Apps iOS e Android com React Native. Integração com APIs, notificações e interface nativa — entregando nas duas plataformas com um só código.</div>
+        <div class="service-desc">Apps iOS e Android com React Native. Integração com APIs, notificações e interface nativa, entregando nas duas plataformas com um só código.</div>
         <div class="service-tags">
           <span class="service-tag">React Native</span>
           <span class="service-tag">Expo</span>
@@ -318,7 +392,7 @@
       <div class="service-card fade-in">
         <div class="service-icon">⚙️</div>
         <div class="service-title">API & Backend</div>
-        <div class="service-desc">APIs RESTful com Node.js — rotas, autenticação JWT, validação, regras de negócio e integração com bancos de dados e serviços externos.</div>
+        <div class="service-desc">APIs RESTful com Node.js: rotas, autenticação JWT, validação, regras de negócio e integração com bancos de dados e serviços externos.</div>
         <div class="service-tags">
           <span class="service-tag">Node.js</span>
           <span class="service-tag">Express</span>
@@ -372,7 +446,7 @@
   <div class="container">
     <p class="section-label">Portfólio</p>
     <h2 class="section-title">Projetos</h2>
-    <p class="section-desc">Projetos reais em desenvolvimento e entregas acadêmicas — portfólio em expansão constante.</p>
+    <p class="section-desc">Projetos reais em desenvolvimento e entregas acadêmicas, portfólio em expansão constante.</p>
     <div class="projects-grid">
 
       <div class="project-card fade-in">
@@ -397,24 +471,10 @@
         </div>
         <div class="project-body">
           <div class="project-title">Clone TabNews</div>
-          <div class="project-desc">Recriação do TabNews do zero — plataforma de notícias e discussões técnicas. Projeto de aprendizado com Next.js, JavaScript, testes de integração de API e deploy na Vercel.</div>
+          <div class="project-desc">Recriação do TabNews do zero, plataforma de notícias e discussões técnicas. Projeto de aprendizado com Next.js, JavaScript, testes de integração de API e deploy na Vercel.</div>
           <div class="project-links">
             <a class="project-link primary" href="https://github.com/Eduardo-cremm/clone-tabnews" target="_blank">GitHub</a>
             <a class="project-link secondary" href="https://clone-tabnews-mu-self.vercel.app" target="_blank">Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-img" style="background: linear-gradient(135deg,#064e3b,#10b981);">
-          💼
-          <span class="project-badge badge-academic">Acadêmico</span>
-        </div>
-        <div class="project-body">
-          <div class="project-title">Startup Financeira — FIAP</div>
-          <div class="project-desc">Participação no desenvolvimento de uma startup focada em crédito empresarial e intermediação bancária. API RESTful com 12+ endpoints, autenticação e banco de dados.</div>
-          <div class="project-links">
-            <a class="project-link primary" href="https://github.com/Eduardo-cremm" target="_blank">GitHub</a>
           </div>
         </div>
       </div>
@@ -432,7 +492,7 @@
   <div class="container">
     <p class="section-label">Contato</p>
     <h2 class="section-title">Vamos trabalhar juntos?</h2>
-    <p class="section-desc">Tem um projeto em mente? Me manda uma mensagem — respondo em até 24h nos dias úteis.</p>
+    <p class="section-desc">Tem um projeto em mente? Me manda uma mensagem: respondo em até 24h nos dias úteis.</p>
     <div class="contact-grid">
       <div>
         <p class="contact-info-title">Canais de contato</p>
@@ -470,10 +530,7 @@
       </div>
 
       <div>
-        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="eb8d52ec-d28a-4dac-875d-74359fdb1608" />
-          <input type="hidden" name="subject" value="Novo contato via portfólio" />
-          <input type="hidden" name="from_name" value="Portfólio Eduardo Cremm" />
+        <form class="contact-form" id="contact-form" action="/api/contact" method="POST">
           <input type="checkbox" name="botcheck" style="display:none" />
           <div class="form-row">
             <div class="form-group">
@@ -487,7 +544,7 @@
           </div>
           <div class="form-group">
             <label for="subject">Tipo de projeto</label>
-            <select id="subject" name="subject">
+            <select id="subject" name="project_type">
               <option value="">Selecione...</option>
               <option value="web">Site / Landing Page</option>
               <option value="mobile">Aplicativo Mobile</option>
@@ -501,6 +558,7 @@
             <label for="message">Mensagem *</label>
             <textarea id="message" name="message" placeholder="Conte sobre o projeto, prazo e orçamento estimado..." required></textarea>
           </div>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAADo3pre6o2vsBrWG"></div>
           <button type="submit" class="btn-submit">Enviar mensagem 🚀</button>
           <div class="form-success" id="form-success">
             ✅ Mensagem enviada com sucesso! Retorno em até 24h.
@@ -528,6 +586,16 @@
   </svg>
 </a>
 
+<!-- CERTIFICATE MODAL -->
+<div class="cert-modal" id="cert-modal">
+  <div class="cert-modal-overlay" data-cert-close></div>
+  <div class="cert-modal-box">
+    <button class="cert-modal-close" data-cert-close aria-label="Fechar">&times;</button>
+    <div class="cert-modal-skeleton" id="cert-modal-skeleton"></div>
+    <img class="cert-modal-img" id="cert-modal-img" src="" alt="Certificado" />
+  </div>
+</div>
+
 <!-- Scripts -->
 <script src="assets/js/main.js"></script>
 
@@ -542,7 +610,7 @@
   "email": "eduardocremmfarias@gmail.com",
   "telephone": "+5511964969441",
   "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressCountry": "BR" },
-  "alumniOf": { "@type": "CollegeOrUniversity", "name": "FIAP — Faculdade de Informática e Administração Paulista" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "FIAP: Faculdade de Informática e Administração Paulista" },
   "sameAs": [
     "https://www.linkedin.com/in/eduardocremm",
     "https://github.com/Eduardo-cremm"

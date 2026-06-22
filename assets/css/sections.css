@@ -102,6 +102,85 @@
 .edu-highlight-item   { display: flex; gap: 0.6rem; align-items: flex-start; color: var(--muted); font-size: 0.86rem; }
 .edu-highlight-item .arrow { color: var(--accent); margin-top: 1px; flex-shrink: 0; }
 
+/* ─── CERTIFICATES ─── */
+#certificates { background: var(--bg); }
+
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.25rem; margin-top: 3rem; }
+.cert-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.6rem; transition: all 0.3s;
+  position: relative; display: flex; flex-direction: column;
+}
+.cert-card:hover { transform: translateY(-4px); border-color: rgba(59, 130, 246, 0.4); }
+.cert-seal {
+  position: absolute; top: 14px; right: 14px;
+  padding: 0.2rem 0.6rem; border-radius: 999px;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.5px;
+}
+.cert-seal.gold   { background: rgba(234, 179, 8, 0.15); color: #eab308; }
+.cert-seal.silver { background: rgba(148, 163, 184, 0.18); color: #94a3b8; }
+.cert-icon  { font-size: 1.8rem; margin-bottom: 0.85rem; }
+.cert-title { font-weight: 700; font-size: 0.98rem; margin-bottom: 0.35rem; padding-right: 3.5rem; }
+.cert-meta  { color: var(--muted); font-size: 0.8rem; margin-bottom: 1.1rem; }
+.cert-link  {
+  align-self: flex-start; padding: 0.4rem 0.9rem; border-radius: 6px;
+  font-size: 0.78rem; font-weight: 600; text-decoration: none;
+  border: 1px solid var(--border); color: var(--muted); cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-top: auto; transition: all 0.25s;
+}
+.cert-link:hover  { background: var(--accent); color: #fff; border-color: transparent; transform: translateY(-2px); }
+.cert-link:active { transform: scale(0.95); }
+.cert-link-arrow  { display: inline-block; transition: transform 0.25s; }
+.cert-link:hover .cert-link-arrow { transform: translateX(4px); }
+
+/* ─── CERTIFICATE MODAL ─── */
+.cert-modal {
+  position: fixed; inset: 0; z-index: 300;
+  display: none; align-items: center; justify-content: center; padding: 2rem;
+}
+.cert-modal.open { display: flex; }
+.cert-modal-overlay {
+  position: absolute; inset: 0; background: rgba(5, 8, 15, 0.8);
+  backdrop-filter: blur(4px); opacity: 0; transition: opacity 0.3s;
+}
+.cert-modal.open .cert-modal-overlay { opacity: 1; }
+.cert-modal-box {
+  position: relative; width: min(900px, 92vw); max-width: 900px;
+  min-height: 60vh; max-height: 85vh;
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  transform: scale(0.9) translateY(20px); opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s;
+}
+.cert-modal.open .cert-modal-box { transform: scale(1) translateY(0); opacity: 1; }
+.cert-modal-close {
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg2); border: 1px solid var(--border); color: var(--text);
+  font-size: 1.3rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.25s;
+}
+.cert-modal-close:hover { background: var(--accent); color: #fff; transform: rotate(90deg); }
+
+.cert-modal-skeleton {
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(100deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.12) 45%, rgba(255,255,255,0.04) 65%);
+  background-size: 200% 100%;
+  animation: cert-shimmer 1.4s infinite;
+  opacity: 1; transition: opacity 0.3s;
+}
+.cert-modal-skeleton.hidden { opacity: 0; }
+@keyframes cert-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+.cert-modal-img {
+  display: block; max-width: 100%; max-height: 85vh; position: relative; z-index: 1;
+  transform: scale(1.08); opacity: 0; filter: blur(6px);
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s, filter 0.5s;
+}
+.cert-modal-img.loaded { transform: scale(1); opacity: 1; filter: blur(0); }
+
 /* ─── SKILLS ─── */
 #skills { background: var(--bg2); }
 
