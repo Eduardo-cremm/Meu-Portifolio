@@ -54,27 +54,23 @@ if (form) {
     btn.disabled = true;
 
     try {
-      const data = Object.fromEntries(new FormData(form).entries());
       const res = await fetch(form.action, {
         method: 'POST',
-        body: JSON.stringify(data),
-        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
       });
 
       if (res.ok) {
         form.reset();
-        if (window.turnstile) window.turnstile.reset();
         successMsg.style.display = 'block';
         btn.textContent = 'Enviar mensagem 🚀';
         btn.disabled = false;
         setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
       } else {
-        if (window.turnstile) window.turnstile.reset();
         btn.textContent = 'Erro — tente novamente';
         btn.disabled = false;
       }
     } catch {
-      if (window.turnstile) window.turnstile.reset();
       btn.textContent = 'Erro — tente novamente';
       btn.disabled = false;
     }

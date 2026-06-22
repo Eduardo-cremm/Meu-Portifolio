@@ -37,9 +37,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Cloudflare Turnstile -->
-  <script src="https://challenge.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="assets/css/base.css" />
@@ -530,7 +527,10 @@
       </div>
 
       <div>
-        <form class="contact-form" id="contact-form" action="/api/contact" method="POST">
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="eb8d52ec-d28a-4dac-875d-74359fdb1608" />
+          <input type="hidden" name="subject" value="Novo contato via portfólio" />
+          <input type="hidden" name="from_name" value="Portfólio Eduardo Cremm" />
           <input type="checkbox" name="botcheck" style="display:none" />
           <div class="form-row">
             <div class="form-group">
@@ -558,7 +558,6 @@
             <label for="message">Mensagem *</label>
             <textarea id="message" name="message" placeholder="Conte sobre o projeto, prazo e orçamento estimado..." required></textarea>
           </div>
-          <div class="cf-turnstile" data-sitekey="0x4AAAAAADo3pre6o2vsBrWG"></div>
           <button type="submit" class="btn-submit">Enviar mensagem 🚀</button>
           <div class="form-success" id="form-success">
             ✅ Mensagem enviada com sucesso! Retorno em até 24h.
