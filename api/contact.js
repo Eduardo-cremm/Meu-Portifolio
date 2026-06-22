@@ -5,6 +5,7 @@ module.exports = async (req, res) => {
   }
 
   const body = req.body || {};
+  console.log('DEBUG body keys:', Object.keys(body), 'content-type:', req.headers['content-type']);
 
   // Honeypot: bots fill hidden fields. Pretend success without sending anything.
   if (body.botcheck) {
@@ -14,6 +15,7 @@ module.exports = async (req, res) => {
 
   const token = body['cf-turnstile-response'];
   if (!token) {
+    console.log('DEBUG missing token, full body:', JSON.stringify(body));
     res.status(400).json({ success: false, message: 'Verificação anti-spam ausente.' });
     return;
   }
@@ -28,9 +30,10 @@ module.exports = async (req, res) => {
     }),
   });
   const verifyData = await verifyRes.json();
+  console.log('DEBUG turnstile verify result:', JSON.stringify(verifyData), 'secretSet:', !!process.env.TURNSTILE_SECRET_KEY);
 
   if (!verifyData.success) {
-    res.status(400).json({ success: false, message: 'Verificação anti-spam falhou.' });
+    res.status(400).json({ success: false, message: 'Verificação anti-spam falhou.', detail: verifyData['error-codes'] });
     return;
   }
 
